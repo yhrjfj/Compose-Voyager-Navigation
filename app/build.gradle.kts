@@ -50,7 +50,17 @@ android {
 }
 
 dependencies {
+    // Injected by me
+    // Used for the basic navigation
+    implementation(libs.voyager.navigator)
 
+    // Allows us to use tab navigation for the bottom bar
+    implementation(libs.voyager.tab.navigator)
+
+    // Support for transition animations
+    implementation(libs.voyager.transitions)
+
+    // Default dependencies
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)

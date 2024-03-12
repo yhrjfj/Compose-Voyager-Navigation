@@ -8,6 +8,7 @@ import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import cafe.adriel.voyager.navigator.Navigator
 import cafe.adriel.voyager.navigator.tab.Tab
 import cafe.adriel.voyager.navigator.tab.TabOptions
+import cafe.adriel.voyager.transitions.SlideTransition
 
 /**
  * Represents the HomeTab object which implements the Tab interface.
@@ -41,6 +42,9 @@ object HomeTab : Tab {
      */
     @Composable
     override fun Content() {
-        Navigator(screen = Screen1())
+        Navigator(screen = Screen1()){
+            // Add Transition
+            SlideTransition(it)
+        }
     }
 }
